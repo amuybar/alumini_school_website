@@ -1,0 +1,20 @@
+
+.Job-Container {
+    background-color: rgba(92, 173, 240, 0.2); /* Light blue background */
+    padding: 20px;
+    
+    margin-top: 0;
+    height: 100%;
+  }
+  .page-container{
+    margin: 0; 
+    padding: 0;
+    
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    color: rgb(2, 8, 68);
+    margin-bottom: 10px;
+  }
+  

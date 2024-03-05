@@ -1,7 +1,7 @@
 /* styles/global.css */
 
 /* Reset some default browser styles */
-body,
+/* body,
 h1,
 h2,
 h3,
@@ -10,7 +10,7 @@ ul,
 li {
   margin: 0;
   padding: 0;
-}
+} */
 
 body {
   font-family: 'Arial', sans-serif;

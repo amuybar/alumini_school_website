@@ -1,0 +1,44 @@
+.landing {
+  position: relative;
+  height: 500px;
+  background-color: rgba(92, 173, 240, 0.445);
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+}
+
+.overlay {
+  background: rgba(58, 85, 85, 0.5);
+  width: 100%;
+  margin: 10px;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px; /* Adjust the margin as needed */
+  color: rgb(2, 8, 68);
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 20px; /* Adjust the margin as needed */
+  color: rgb(2, 8, 68);
+}
+
+.cta-button {
+  background-color: #fafafa;
+  color: rgb(2, 8, 68);
+  padding: 10px 20px;
+  
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 20px; 
+  margin-bottom: 20px; 
+}
+

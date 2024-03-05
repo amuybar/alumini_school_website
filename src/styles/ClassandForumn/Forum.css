@@ -1,0 +1,52 @@
+/* components/Forum.css */
+.forum-container {
+    margin-top: 20px;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: rgb(2, 8, 68);
+    margin-bottom: 10px;
+    border-bottom: 2px solid rgb(2, 8, 68);
+    padding-bottom: 5px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid rgba(92, 173, 240, 0.8); /* Light blue border */
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  
+    &:hover {
+      background-color: rgba(92, 173, 240, 0.2); /* Light blue background on hover */
+    }
+  
+    &.selected-forum {
+      background-color: rgba(92, 173, 240, 0.4); /* Light blue background for selected forum */
+    }
+  }
+  
+  .forum-info {
+    flex-grow: 1;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    color: rgb(2, 8, 68);
+    margin-bottom: 5px;
+  }
+  
+  .comment-icon {
+    color: rgba(92, 173, 240, 0.8); /* Light blue color */
+    font-size: 1.5rem;
+  }
+  

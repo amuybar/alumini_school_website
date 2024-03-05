@@ -1,0 +1,23 @@
+/* pages/AlumniDirectoryPage.css */
+.alumni-directory-page {
+    padding: 20px;
+    background-color: lightblue;
+    height: 100vh;
+  }
+  
+  .alumni-search-form {
+    margin-bottom: 20px;
+  }
+  
+  .alumni-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .alumni-item {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  

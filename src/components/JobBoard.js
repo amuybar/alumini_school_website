@@ -1,14 +1,14 @@
 import React from 'react';
 import JobListings from './JobListings';
 import JobApplicationForm from './JobApplicationForm';
-
+import '../styles/JobBoard/JobBoard.css'
 const JobBoard = () => {
   return (
-    <div>
+    <div className='Job-Container'>
       <h2>Job Board</h2>
       <JobListings />
       <JobApplicationForm />
-      {/* Add more components for job board as needed */}
+
     </div>
   );
 };

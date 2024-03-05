@@ -1,0 +1,16 @@
+/* Components/Footer.css */
+.footer {
+    background-color: #94e9f8;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 15px;
+    
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  

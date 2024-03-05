@@ -1,27 +1,52 @@
+// pages/Home.js
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Nav from '../components/Home/Nav';
+import Landing from '../components/Home/Landing';
+import QuickLinksCard from '../components/Home/QuickLinks';
+import NewsCard from '../components/Home/News';
+import EventsCard from '../components/Home/Events';
+import MemoriesCard from '../components/Home/Memories';
+import Contact from '../components/Home/Contact';
+import BottomLinks from '../components/Home/BottomLinks';
+import Footer from '../components/Home/Footer';
+import '../styles/Home/Home.css'
 
 const Home = () => {
   return (
-    <div className='home-container'>
-      <h1>Welcome to the Alumni Website!</h1>
-      <p>Explore the various sections:</p>
-      
-      <ul>
-        <li><Link to='/alumni-directory'>Alumni Directory</Link></li>
-        <li><Link to='/event-management'>Event Management</Link></li>
-        <li><Link to='/job-board'>Job Board</Link></li>
-        <li><Link to='/news-and-updates'>News and Updates</Link></li>
-        <li><Link to='/donation-platform'>Donation Platform</Link></li>
-        <li><Link to='/class-notes-and-forums'>Class Notes and Forums</Link></li>
-        <li><Link to='/photo-and-video-gallery'>Photo and Video Gallery</Link></li>
-        <li><Link to='/social-media-integration'>Social Media Integration</Link></li>
-        <li><Link to='/membership-management'>Membership Management</Link></li>
-        <li><Link to='/privacy-controls'>Privacy Controls</Link></li>
-        <li><Link to='/feedback-and-surveys'>Feedback and Surveys</Link></li>
-      </ul>
+    <div className="home">
+      <Nav />
+      <Landing />
+      <section className="cards-section">
+      <QuickLinksCard title="Alumni Directory" link="/alumni-directory" />
+        <QuickLinksCard title="Class Note Forums" link="/class-notes-and-forums" />
+        <QuickLinksCard title="Job Board" link="/job-board" />
+        <QuickLinksCard title="Photo Gallery" link="/photo-and-video-gallery" />
+        <NewsCard
+          title="Latest News"
+          image="images/cotere1.jpg"
+          description="Catch up on the latest happenings in our community."
+          link="/news"
+        />
+        <MemoriesCard
+          title="Memorable Moments"
+          image="images/meeting.jpg"
+          description="Relive the memories of our time together."
+          link="/memories"
+        />
+        <EventsCard
+          title="Upcoming Events"
+          image="images/gate.jpg"
+          description="Stay informed about upcoming alumni events."
+          link="/events"
+        />
+       
+      </section>
+      <Contact />
+      <BottomLinks />
+      <Footer />
     </div>
   );
 };
 
 export default Home;
+

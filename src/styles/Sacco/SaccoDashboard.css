@@ -1,0 +1,54 @@
+
+.sacco-dashboard {
+    padding: 20px;
+    background-color:lightblue;
+    height: 100%;
+    align-items: center;
+  }
+  
+  h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    margin-bottom: 20px;
+  }
+  .icon-links {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .icon-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .icon-link span {
+    margin-top: 5px;
+  }
+  
+  .dashboard-content {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .dashboard-section {
+    flex: 1;
+    padding: 20px;
+    background-color: #0d9cdf;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+  }
+  
+  h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  /* Add more styles based on your design preferences */
+  

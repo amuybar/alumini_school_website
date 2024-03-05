@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
+import SaccoPage from './pages/SaccoPage'; 
 import AlumniDirectoryPage from './pages/AlumniDirectoryPage';
 import EventManagementPage from './pages/EventManagementPage';
 import JobBoardPage from './pages/JobBoardPage';
@@ -13,14 +14,22 @@ import MembershipManagementPage from './pages/MembershipManagementPage';
 import PrivacyControlsPage from './pages/PrivacyControlsPage';
 import FeedbackAndSurveysPage from './pages/FeedbackAndSurveysPage';
 import './styles/App.css';
+import LoginPage from './components/sacco/Dashboard/Auth/Login';
+import RegisterPage from './components/sacco/Dashboard/Auth/Register';
+import SaccoDashboard from './components/sacco/Dashboard/SaccoManagement/SaccoDashboard';
+
 
 function App() {
   return (
     <Router>
       <div className='App'>
         <Routes>
-          {/* Use `element` instead of `component` */}
+        
           <Route path="/" element={<Home />} />
+          <Route path="/sacco" element={<SaccoPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/saccodash" element={<SaccoDashboard />} />
+          <Route path="/register" element={<RegisterPage />} />
           <Route path='/alumni-directory' element={<AlumniDirectoryPage />} />
           <Route path='/event-management' element={<EventManagementPage />} />
           <Route path='/job-board' element={<JobBoardPage />} />

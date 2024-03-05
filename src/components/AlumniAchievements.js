@@ -1,13 +1,18 @@
-import React from 'react';
 
-const AlumniAchievement = () => {
-  // Add your logic and UI for displaying alumni achievements here
+import React from 'react';
+import '../styles/Alumnidirectory/AlumniAchievements.css'
+
+const AlumniAchievements = ({ achievements }) => {
   return (
-    <div>
+    <div className="alumni-achievements">
       <h2>Alumni Achievements</h2>
-      {/* Display achievements data */}
+      <ul>
+        {achievements.map((achievement, index) => (
+          <li key={index}>{achievement}</li>
+        ))}
+      </ul>
     </div>
   );
 };
 
-export default AlumniAchievement;
+export default AlumniAchievements;

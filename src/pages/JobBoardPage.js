@@ -1,10 +1,10 @@
 import React from 'react';
 import JobBoard from '../components/JobBoard';
-
+import '../styles/JobBoard/JobBoard.css'
 const JobBoardPage = () => {
   return (
-    <div className='page-container'>
-      <h1>Job Board</h1>
+    <div>
+     
       <JobBoard />
     </div>
   );

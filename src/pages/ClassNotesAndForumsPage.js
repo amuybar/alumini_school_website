@@ -1,13 +1,14 @@
 import React from 'react';
-import ClassNotes from '../components/ClassNotes';
-import Forums from '../components/Forums';
+import AlumniSpotlight from '../components/AlumniSpotlight';
+import Forum from '../components/Forums';
+import '../styles/ClassandForumn/ClassNotesAndForumsPage.css'
 
 const ClassNotesAndForumsPage = () => {
   return (
-    <div className='page-container'>
-      <h1>Class Notes and Forums</h1>
-      <ClassNotes />
-      <Forums />
+    <div className='page-content '>
+      <h1>Spotlight and Forums</h1>
+      <AlumniSpotlight />
+      <Forum/>
     </div>
   );
 };

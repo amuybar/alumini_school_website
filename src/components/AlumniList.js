@@ -1,13 +1,18 @@
+// components/AlumniDirectory/AlumniList.js
 import React from 'react';
 
-const AlumniList = () => {
-  // Add your logic and UI for displaying a list of alumni
+const AlumniList = ({ alumniData }) => {
   return (
-    <ul>
-      <li>Alumni 1</li>
-      <li>Alumni 2</li>
-      {/* Display more alumni */}
-    </ul>
+    <div className="alumni-list">
+      {/* Map through the alumni data and display each item */}
+      {alumniData.map((alumni) => (
+        <div key={alumni.id} className="alumni-item">
+          <p>{alumni.name}</p>
+          <p>Class of {alumni.classYear}</p>
+          <p>Contact: {alumni.contact}</p>
+        </div>
+      ))}
+    </div>
   );
 };
 
