@@ -15,7 +15,8 @@ const Register = () => {
     e.preventDefault();
     try {
       await axios.post('http://localhost:3000/auth/register', { username, password });
-      setShowAlumniForm(true); // Show alumni registration form after successful registration
+      setShowAlumniForm(true); 
+      history('/');
     } catch (error) {
       console.error('Registration failed:', error);
     }

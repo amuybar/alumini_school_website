@@ -25,11 +25,11 @@ const Surveys = () => {
     setQuestion(event.target.value);
   };
 
-  const handleOptionChange = (index, event) => {
-    const updatedOptions = [...options];
-    updatedOptions[index] = event.target.value;
-    setOptions(updatedOptions);
-  };
+  // const handleOptionChange = (index, event) => {
+  //   const updatedOptions = [...options];
+  //   updatedOptions[index] = event.target.value;
+  //   setOptions(updatedOptions);
+  // };
 
   const handleAddOption = () => {
     setOptions([...options, '']);

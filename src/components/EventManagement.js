@@ -9,10 +9,7 @@ const EventManagement = () => {
  useEffect(() => {
   const fetchEventData = async () => {
     try {
-      // Retrieve authentication token from local storage (assuming it's stored there)
-      const token = localStorage.getItem('token');
-
-      // Include token in the request headers
+   
       const response = await axios.get('http://localhost:3000/events');
 
       setEventData(response.data);
