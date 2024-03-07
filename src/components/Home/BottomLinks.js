@@ -11,7 +11,7 @@ const BottomLinks = () => {
         <li><Link to="/privacy-policy">Privacy Policy</Link></li>
         <li><Link to="/contact-us">Contact Us</Link></li>
         <li><Link to="/terms-of-service">Terms of Service</Link></li>
-        {/* Add more links as needed */}
+        
       </ul>
     </section>
   );

@@ -18,9 +18,10 @@ const Home = () => {
       <Landing />
       <section className="cards-section">
       <QuickLinksCard title="Alumni Directory" link="/alumni-directory" />
-        <QuickLinksCard title="Class Note Forums" link="/class-notes-and-forums" />
+        <QuickLinksCard title="Spotlight Forums" link="/class-notes-and-forums" />
         <QuickLinksCard title="Job Board" link="/job-board" />
-        <QuickLinksCard title="Photo Gallery" link="/photo-and-video-gallery" />
+        <QuickLinksCard title="Survey and Feedback" link="/feedback-and-surveys" />
+       
         <NewsCard
           title="Latest News"
           image="images/cotere1.jpg"

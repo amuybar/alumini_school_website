@@ -26,10 +26,10 @@ const AlumniSpotlight = () => {
      
       <ul>
         {initialSpotlights.map((alumni) => (
-          <li key={alumni.id}>
+          <li key={alumni.id} className='list-container'>
             <h3>{alumni.name}</h3>
-            <p><strong>Occupation:</strong> {alumni.occupation}</p>
-            <p>{alumni.bio}</p>
+            <div className='spotlight'><p><strong>Occupation:</strong> {alumni.occupation}</p>
+            <p>{alumni.bio}</p></div>
           </li>
         ))}
       </ul>

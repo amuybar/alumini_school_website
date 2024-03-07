@@ -1,25 +1,29 @@
 /* Components/Home/BottomLinks.css */
 .bottom-links {
-    margin-top: 30px;
+    margin: 30px;
+
   }
   
   .bottom-links h3 {
     font-size: 1.5rem;
+    
   }
   
   .bottom-links ul {
     list-style: none;
     padding: 0;
     margin: 10px 0;
+    border: none;
   }
   
   .bottom-links li {
     margin-bottom: 10px;
+   border: none;
   }
   
   .bottom-links a {
     text-decoration: none;
-    color: #3498db; /* Adjust the link color */
+    color: #063758; 
     font-size: 1.2rem;
   }
   

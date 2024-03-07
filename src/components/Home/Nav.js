@@ -1,6 +1,6 @@
 // Components/Home/Nav.js
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState ,useEffect} from 'react';
+import { Link  } from 'react-router-dom';
 import {  FiMenu,  FiSkipBack } from 'react-icons/fi';
 import '../../styles/Home/Nav.css'; // Import the CSS file
 
@@ -10,6 +10,20 @@ const Nav = () => {
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  // Simulate checking if the user is logged in
+  useEffect(() => {
+    // Your authentication logic here
+    const isAuthenticated = localStorage.getItem('token') !== null;
+    setIsLoggedIn(isAuthenticated);
+  }, []);
+
+  const handleLogout = () => {
+    // Your logout logic here
+    localStorage.removeItem('token');
+    setIsLoggedIn(false);
+  };
 
   return (
     <nav className={`nav ${isMenuOpen ? 'open' : ''}`}>
@@ -17,7 +31,11 @@ const Nav = () => {
         <Link to="/">STAMMS</Link>
       </div>
       <div className="nav-buttons">
-        <Link to="/">Home</Link>
+      {isLoggedIn ? (
+            <button onClick={handleLogout}>Logout</button>
+          ) : (
+            <Link to="/login">Login</Link>
+          )}
         <Link to="/alumni-directory">Alumni Directory</Link>
         <Link to="/event-management">Event Management</Link>
       </div>
@@ -45,7 +63,7 @@ const Nav = () => {
         <Link to="/feedback-and-surveys"className='link'>Feedback And Survey </Link>
         <Link to="/social-media-integration"className='link'>Social Media</Link>
         <Link to="/privacy-controls"className='link'>Privacy</Link>
-        <Link to="/class-notes-and-forums"className='link'>Class and Forumns</Link></div>
+        <Link to="/class-notes-and-forums"className='link'>Spotlight Forumns</Link></div>
       
       </div>
     </nav>

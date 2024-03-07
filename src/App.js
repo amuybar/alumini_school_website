@@ -15,8 +15,12 @@ import PrivacyControlsPage from './pages/PrivacyControlsPage';
 import FeedbackAndSurveysPage from './pages/FeedbackAndSurveysPage';
 import './styles/App.css';
 import LoginPage from './components/sacco/Dashboard/Auth/Login';
-import RegisterPage from './components/sacco/Dashboard/Auth/Register';
+
 import SaccoDashboard from './components/sacco/Dashboard/SaccoManagement/SaccoDashboard';
+import Login from './components/Auth/Login';
+import PrivateRoutes from'./PrivateRoutes/PrivateRoute'
+import ForgotPassword from './components/Auth/ForgotPassword';
+import Register from './components/Auth/Register';
 
 
 function App() {
@@ -24,15 +28,20 @@ function App() {
     <Router>
       <div className='App'>
         <Routes>
-        
-          <Route path="/" element={<Home />} />
-          <Route path="/sacco" element={<SaccoPage />} />
+          <Route path="/login" element={<Login />} />
+            <Route element={<PrivateRoutes/>}>
+            <Route path="/" element={<Home />} exact/>
+            <Route path="/sacco" element={<SaccoPage />} exact/>
+            <Route path='/alumni-directory' element={<AlumniDirectoryPage />} />
+            <Route path='/event-management' element={<EventManagementPage />} />
+            <Route path='/job-board' element={<JobBoardPage />} />
+          </Route>
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          
           <Route path="/login" element={<LoginPage />} />
           <Route path="/saccodash" element={<SaccoDashboard />} />
-          <Route path="/register" element={<RegisterPage />} />
-          <Route path='/alumni-directory' element={<AlumniDirectoryPage />} />
-          <Route path='/event-management' element={<EventManagementPage />} />
-          <Route path='/job-board' element={<JobBoardPage />} />
+          <Route path="/register" element={<Register />} />
+        
           <Route path='/news-and-updates' element={<NewsAndUpdatesPage />} />
           <Route path='/donation-platform' element={<DonationPlatformPage />} />
           <Route path='/class-notes-and-forums' element={<ClassNotesAndForumsPage />} />

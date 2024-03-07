@@ -1,7 +1,6 @@
 // components/JobListings.js
 import React from 'react';
 import '../styles/JobBoard/JobListings.css'
-import { FaPlus } from 'react-icons/fa';
 
 const JobListings = () => {
   // Example job listings data
@@ -16,18 +15,16 @@ const JobListings = () => {
       <h2>Job Listings</h2>
       <ul>
         {jobListingsData.map((job) => (
-          <li key={job.id}>
+          <li key={job.id}className='listing-container'>
             <h3>{job.title}</h3>
             <p><strong>Company:</strong> {job.company}</p>
             <p><strong>Location:</strong> {job.location}</p>
             <p><strong>Posted Date:</strong> {job.postedDate}</p>
-            {/* Add additional information or UI elements as needed */}
+          
           </li>
         ))}
       </ul>
-      <div className="add-job-icon">
-        <FaPlus size={20} color="#007bff" />
-      </div>
+   
     </div>
   );
 };

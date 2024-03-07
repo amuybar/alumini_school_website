@@ -2,7 +2,13 @@
 .alumni-spotlight-container {
     margin-top: 20px;
   }
-  
+  .list-container{
+    display: block;
+  }
+  .spotlight{
+    display: flex; 
+    flex-direction: row;
+  }
   h2 {
     font-size: 2rem;
     color: rgb(2, 8, 68);

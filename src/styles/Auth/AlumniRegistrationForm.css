@@ -1,0 +1,37 @@
+/* AlumniRegistrationForm.css */
+.alumni-form-container {
+    background-color: #f0f8ff; /* Light blue background */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Drop shadow effect */
+  }
+  
+  .alumni-form-container h2 {
+    margin-bottom: 20px;
+  }
+  
+  .alumni-form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .alumni-form-container input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .alumni-form-container button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue button color */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .alumni-form-container button:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+  }
+  

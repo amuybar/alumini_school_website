@@ -1,5 +1,6 @@
 import React from 'react';
 import EventManagement from '../components/EventManagement';
+import '../styles/Event-Managment/EventManagement.css'
 
 const EventManagementPage = () => {
   return (

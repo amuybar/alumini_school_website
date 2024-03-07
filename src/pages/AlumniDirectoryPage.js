@@ -1,23 +1,37 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import AlumniList from '../components/AlumniList';
 import AlumniSearchForm from '../components/AlumniSearchForm';
 import AlumniAchievements from '../components/AlumniAchievements';
 import '../styles/Alumnidirectory/AlumniDirectory.css'
 
-
 const AlumniDirectoryPage = () => {
-  // Mock data for demonstration purposes
-  const allAlumniData = [
-    { id: 1, name: 'Barrack Amuyunzu', classYear: 2018, contact: 'odaribq@gmail.com' },
-    { id: 2, name: 'Steven Miyawa', classYear: 2023, contact: 'jane@example.com' },
-    { id: 1, name: 'Daniel Simiyu', classYear: 2019, contact: 'john@example.com' },
-    { id: 2, name: 'Moris Okota', classYear: 2020, contact: 'jane@example.com' },
-    
-  ];
-
+  const [allAlumniData, setAllAlumniData] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
   const [showList, setShowList] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchAlumniData = async () => {
+      try {
+        const response = await axios.get('http://localhost:3000/alumni');
+        const transformedAlumniData = response.data.map((alumni) => ({
+          id: alumni.id,
+          name: alumni.name,
+          classYear: alumni.year,
+          contact: `${alumni.email} - ${alumni.phone}` // Combine email and phone as contact
+        }));
+        setAllAlumniData(transformedAlumniData);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching alumni data:', error);
+        setLoading(false);
+      }
+    };
+  
+    fetchAlumniData();
+  }, []);
 
   const handleSearch = (searchTerm, selectedClass) => {
     if (!searchTerm) {
@@ -43,28 +57,36 @@ const AlumniDirectoryPage = () => {
       return <h2>No data found for "{searchQuery}"</h2>;
     }
   };
+
   const achievementsData = [
     'Awarded Best in Business, 2010',
     'Published a bestselling novel, 2015',
     'Invented groundbreaking technology, 2018',
     // Add more achievements as needed
   ];
+
   return (
     <div className="alumni-directory-page">
       <h1>Alumni Directory</h1>
       <AlumniSearchForm onSearch={handleSearch} />
-      {showList ? (
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
         <>
-          {searchResults.length > 0 ? (
+          {showList ? (
             <>
-              <AlumniList alumniData={searchResults} />
-              <AlumniAchievements achievements={achievementsData} />
+              {searchResults.length > 0 ? (
+                <>
+                  <AlumniList alumniData={searchResults} />
+                  <AlumniAchievements achievements={achievementsData} />
+                </>
+              ) : (
+                renderNoDataMessage()
+              )}
             </>
-          ) : (
-            renderNoDataMessage()
-          )}
+          ) : null}
         </>
-      ) : null}
+      )}
     </div>
   );
 };
